@@ -4,6 +4,9 @@ const bodyParser= require('body-parser');
 const port=8000;
 const app= express();
 
+const User = require('./models/User');
+mongoose.connect('mongod://localhost/userData')
+
 app.use(bodyParser.json());
 
 app.listen(port, ()=>{
